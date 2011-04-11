@@ -1,0 +1,13 @@
+libnatspec (0.2.6-1ubuntu1) maverick; urgency=low
+
+  * debian/patches:
+     + Added 05_cp737+cp775.diff - support for CP737 and CP775.
+
+ -- Dmitry Frolov (Launchpad.net) <dmitry.frolov@gmail.com>  Mon, 11 Apr 2011 09:51:50 +0700
+
+libnatspec (0.2.6-1) unstable; urgency=low
+
+  [ Andrew O. Shadoura ]
+  * Initial release (Closes: # 545151)
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Thu, 05 Aug 2010 05:15:45 +0200

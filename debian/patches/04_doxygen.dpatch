@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 04_doxygen.dpatch by Andrew O. Shadoura <bugzilla@tut.by>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Switch doxygen to English
+
+@DPATCH@
+
+--- libnatspec-0.2.4.orig/docs/libnatspecDox.cfg.in
++++ libnatspec-0.2.4/docs/libnatspecDox.cfg.in
+@@ -7,7 +7,7 @@
+ PROJECT_NUMBER         = @VERSION@
+ OUTPUT_DIRECTORY       = 
+ CREATE_SUBDIRS         = NO
+-OUTPUT_LANGUAGE        = Russian
++OUTPUT_LANGUAGE        = English
+ USE_WINDOWS_ENCODING   = NO
+ BRIEF_MEMBER_DESC      = YES
+ REPEAT_BRIEF           = YES

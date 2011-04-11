@@ -1,0 +1,54 @@
+Source: libnatspec
+Priority: extra
+Maintainer: Andrew O. Shadoura <bugzilla@tut.by>
+Uploaders: Rolf Leggewie <foss@rolf.leggewie.biz>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libpopt-dev (>= 1.14),
+ doxygen (>= 1.5.6), autoconf, automake, libtool
+Standards-Version: 3.9.1
+Section: libs
+Homepage: http://natspec.sourceforge.net/
+Vcs-git: git://git.debian.org/git/collab-maint/libnatspec.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/libnatspec.git
+
+Package: libnatspec-dev
+Section: libdevel
+Architecture: any
+Depends: libnatspec0 (= ${binary:Version}), ${misc:Depends}
+Description: a library for national and language-specific issues (development)
+ This library provides userful functions for dealing with locales and charsets.
+ Natspec helps to solve most problems related to text reencoding. It enhances 
+ portability and frees projects from dealing with encoding-specific issues
+ themselves.
+ .
+ This package contains files needed for development with natspec.
+
+Package: libnatspec-examples
+Section: devel
+Architecture: any
+Depends: libnatspec-dev (= ${binary:Version}), ${misc:Depends}
+Description: a library for national and language-specific issues (examples)
+ This library provides userful functions for dealing with locales and charsets.
+ Natspec helps to solve most problems related to text reencoding. It enhances 
+ portability and frees projects from dealing with encoding-specific issues
+ themselves.
+ .
+ This package contains source code of some examples of using natspec.
+
+Package: libnatspec0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: a library for national and language-specific issues
+ This library provides userful functions for dealing with locales and charsets.
+ Natspec helps to solve most problems related to text reencoding. It enhances 
+ portability and frees projects from dealing with encoding-specific issues
+ themselves.
+
+Package: natspec-bin
+Architecture: any
+Section: utils
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple frontend binary to call the libnatspec library
+ Natspec helps to solve most problems related to text reencoding. It enhances 
+ portability and frees projects from dealing with encoding-specific issues
+ themselves.

@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh --with-autotools-dev --with-autoreconf $@
+
+override_dh_auto_clean:
+	rm -f libhi/Makefile
+	dh_auto_clean
