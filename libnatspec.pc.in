@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libnatspec
+Description: Nation specifity library - libnatspec
+Requires:
+Version: @VERSION@
+Libs: -lnatspec
+Cflags:

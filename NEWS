@@ -1,0 +1,86 @@
+libnatspec-0.2.4: 15-Feb-2008:
+ - natspec_convert returns original string if failed (fix bug #14301)
+ - small bugfixes, clean code
+
+libnatspec-0.2.3: 02-Jan-2008:
+ - add patches for unzip, pmount
+ - fix build
+
+libnatspec-0.2.3-beta: 13-Mar-2006:
+ - add natspec_iconv, natspec_iconv_open, natspec-iconv_close
+ - add transliterate param to natspec_convert (set to 0 for old behaviour)
+ - obsolete natspec_convert_with_translit (use natspec_convert with last param set to 1)
+ - add --system-locale in natspec
+ - add patch for o3read
+ - add patch for catpkt from Igor Zubkov <icesik@mail.ru>
+ - check G_FILENAME_ENCODING for @locale value
+ - add patch for dict client, isoinfo from cdrtools
+ 
+libnatspec-0.2.2: 22-Jul-2005:
+ - fix use static buffer natspec_get_codepage (change type of returned value to int)
+ - review code and some cleanup
+ - introduce natspec_locale_is_utf8 function
+ - do not use LANGUAGE env variable
+ - build API documentation
+
+libnatspec-0.2.1: 09-Apr-2005:
+ - fix CP1125 order
+ - fix locale string parsing
+ - add print current charset in natspec util (in info mode)
+
+libnatspec-0.2.0: 17-Mar-2005:
+ - rename get_user_locale() to get_current_locale()
+ - discard from toupper/tolower/isalnum/strcasecmp using (it was locale depended)
+ - fix DOS charset for uk_UA
+ - introduce samba/loadparams (for server autotuning) - does not work yet
+
+libnatspec-0.1.9: 03-Mar-2005:
+ - add jfs support
+ - update submount patch (to be simple)
+ - update samba patch (add default charsets for params)
+ - fixes for compilation in various OS
+ - natspec: print overall information by default, print ASCII for unknown system
+ - do not use setlocale anywhere
+ - add --with-i18n-file option for set file with LANG variable at your system
+ - add --with-python option to configure
+ - improved get_filesystem_encoding
+ - humble_charset do toupper now and breaks at ':' symbol
+ - repack_locale do tolower for lang and toupper for country string
+
+libnatspec-0.1.0: 27-Feb-2005:
+ - fixed locale using order, add some fallbacks for unusual situation
+ - update docs
+
+libnatspec-0.0.9: 27-Feb-2005:
+ - rename enrich_fs_options to get_enriched_fs_options with incompatible change args
+ - update mount/submount, sdcv example patches
+ - add example path for samba (smbmount/cifsmount)
+ - add auto assumed local encoding in natspec_convert
+ - add convert_with_translit with transliteration
+   (from links project) if conversion is not possible
+ - add natspec.m4 for autotools, it makes natspec configure is easy
+
+libnatspec-0.0.4: 24-Feb-2005:
+ - add python binding
+ - code cleanup
+ - cleanup comments in header file
+ - add README with short description (in English)
+ - add README-ru.html with description (in Russian)
+ 
+libnatspec-0.0.3: 23-Feb-2005:
+ - fix bug with unix charset (was due misunderstanging wine behaviour)
+ - add examples of patch for mount, submount, mkisofs, isoinfo, stardict-sdcv
+ 
+libnatspec-0.0.2: 22-Feb-2005:
+ - add get_charset function
+ - add convert for lossy conversion between encoding
+ - add smbfs support in enrich_fs_options
+
+libnatspec-0.0.1: 20-Feb-2005:
+ - first public release after born
+ - support for mount filesystem (enrich_fs_options)
+ - system filename encoding detection (get_filename_encoding)
+ - get system locale from some file (/etc/sysconfig/i18n) (get_system_locale)
+ - retrieve charset/codepage for another OS by system/current
+   locale/charset (get_charset_by_locale)
+ - command line util for using features in shells (natspec)
