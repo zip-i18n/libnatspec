@@ -1,6 +1,7 @@
-diff -pruN ../libnatspec-0.2.6.orig/lib/data/charset_names.h ./lib/data/charset_names.h
---- ../libnatspec-0.2.6.orig/lib/data/charset_names.h	2010-01-11 05:19:58.000000000 +0600
-+++ ./lib/data/charset_names.h	2011-04-11 09:43:11.000000000 +0700
+diff --git a/lib/data/charset_names.h b/lib/data/charset_names.h
+index 51db9b1..81a91ff 100644
+--- a/lib/data/charset_names.h
++++ b/lib/data/charset_names.h
 @@ -34,6 +34,8 @@ static const struct charset_entry
      { "CP1256",    "cp1256",      1256 }, /* // */
      { "CP1257",    "cp1257",      1257 }, /* Estonian, Latvian, Lithuanian */
@@ -22,9 +23,10 @@ diff -pruN ../libnatspec-0.2.6.orig/lib/data/charset_names.h ./lib/data/charset_
      { "IBM850",    "cp850",        850 }, /* // 2.4 cp Codepage 850 (Europe)*/
      { "IBM852",    "cp852",        852 }, /* Codepage 852 (Central/Eastern Europe) */
      { "IBM855",    "cp855",        855 }, /* Codepage 855 (Cyrillic) */
-diff -pruN ../libnatspec-0.2.6.orig/lib/data/gen_data.sh ./lib/data/gen_data.sh
---- ../libnatspec-0.2.6.orig/lib/data/gen_data.sh	2010-01-11 05:19:58.000000000 +0600
-+++ ./lib/data/gen_data.sh	2011-04-11 09:43:11.000000000 +0700
+diff --git a/lib/data/gen_data.sh b/lib/data/gen_data.sh
+index 53f5920..9b998d5 100755
+--- a/lib/data/gen_data.sh
++++ b/lib/data/gen_data.sh
 @@ -3,7 +3,7 @@
  #    $Id: gen_data.sh,v 1.8 2005/03/09 20:07:30 lav Exp $
  
@@ -46,10 +48,11 @@ diff -pruN ../libnatspec-0.2.6.orig/lib/data/gen_data.sh ./lib/data/gen_data.sh
  done
  echo >>$OUTFILE
  echo "/* Follow entries is dummy for ASCII/ANSI encoding */" >>$OUTFILE
-diff -pruN ../libnatspec-0.2.6.orig/lib/data/get_charset_data.h ./lib/data/get_charset_data.h
---- ../libnatspec-0.2.6.orig/lib/data/get_charset_data.h	2010-01-11 05:19:58.000000000 +0600
-+++ ./lib/data/get_charset_data.h	2011-04-11 09:45:55.000000000 +0700
-@@ -105,10 +105,10 @@ static const struct charsetrel_entry cha
+diff --git a/lib/data/get_charset_data.h b/lib/data/get_charset_data.h
+index d7a821d..11860f7 100644
+--- a/lib/data/get_charset_data.h
++++ b/lib/data/get_charset_data.h
+@@ -105,10 +105,10 @@ static const struct charsetrel_entry charset_relation[] =
   {"de_LU.UTF8",   4103,  "UTF8",        "CP1252",   "IBM850",   "MAC" },
   {"de_LU@euro",   4103,  "ISO885915",   "CP1252",   "IBM850",   "MAC" },
   {"dz_BT",        1033,  "UTF8",        "CP1252",   "IBM437",   "MAC" },
@@ -64,7 +67,7 @@ diff -pruN ../libnatspec-0.2.6.orig/lib/data/get_charset_data.h ./lib/data/get_c
   {"en_AG",        1033,  "UTF8",        "CP1252",   "IBM437",   "MAC" },
   {"en_AU",        3081,  "ISO88591",    "CP1252",   "IBM850",   "MAC" },
   {"en_AU.UTF8",   3081,  "UTF8",        "CP1252",   "IBM850",   "MAC" },
-@@ -182,9 +182,9 @@ static const struct charsetrel_entry cha
+@@ -182,9 +182,9 @@ static const struct charsetrel_entry charset_relation[] =
   {"es_UY.UTF8",   14346, "UTF8",        "CP1252",   "IBM850",   "MAC" },
   {"es_VE",        8202,  "ISO88591",    "CP1252",   "IBM850",   "MAC" },
   {"es_VE.UTF8",   8202,  "UTF8",        "CP1252",   "IBM850",   "MAC" },
@@ -77,7 +80,7 @@ diff -pruN ../libnatspec-0.2.6.orig/lib/data/get_charset_data.h ./lib/data/get_c
   {"eu_ES",        1069,  "ISO88591",    "CP1252",   "IBM850",   "MAC" },
   {"eu_ES.UTF8",   1069,  "UTF8",        "CP1252",   "IBM850",   "MAC" },
   {"eu_ES@euro",   1069,  "ISO885915",   "CP1252",   "IBM850",   "MAC" },
-@@ -278,10 +278,10 @@ static const struct charsetrel_entry cha
+@@ -278,10 +278,10 @@ static const struct charsetrel_entry charset_relation[] =
   {"li_BE",        1033,  "UTF8",        "CP1252",   "IBM437",   "MAC" },
   {"li_NL",        1033,  "UTF8",        "CP1252",   "IBM437",   "MAC" },
   {"lo_LA",        1033,  "UTF8",        "CP1252",   "IBM437",   "MAC" },
