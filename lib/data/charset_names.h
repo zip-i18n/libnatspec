@@ -34,6 +34,8 @@ static const struct charset_entry
     { "CP1256",    "cp1256",      1256 }, /* // */
     { "CP1257",    "cp1257",      1257 }, /* Estonian, Latvian, Lithuanian */
     { "CP1258",    "cp1258",      1258 }, /* // */
+	/* There is no IBM737 -> CP737 alias in iconv at the moment (glibc 2.12.1). */
+    { "CP737",     "cp737",        737 }, /* // 2.4/6 Codepage 737 (Greek)*/
     { "CP932",     "cp932",        932 }, /* Japanese charsets (Shift-JIS, EUC-JP) */
     { "CP936",     "cp936",        936 }, /* Simplified Chinese charset (CP936, GB2312) */
     { "CP949",     "cp949",        949 }, /* Korean charset (CP949, EUC-KR) */
@@ -45,10 +47,7 @@ static const struct charset_entry
     { "IBM424",    "cp424",        424 },
     { "IBM437",    "cp437",        437 }, /* // 2.4 cp Codepage 437 (United States, Canada) */
     { "IBM500",    "cp500",        500 },
-/* Unknown for iconv */
-/*    { "IBM737",    "cp737", 737 },*/ /* // 2.4/6 Codepage 737 (Greek)*/
-/*    { "IBM775",    "cp775", 775 },*/ /* // 2.4/6 Codepage 775 (Baltic Rim)*/
-
+    { "IBM775",    "cp775",        775 }, /* // 2.4/6 Codepage 775 (Baltic Rim)*/
     { "IBM850",    "cp850",        850 }, /* // 2.4 cp Codepage 850 (Europe)*/
     { "IBM852",    "cp852",        852 }, /* Codepage 852 (Central/Eastern Europe) */
     { "IBM855",    "cp855",        855 }, /* Codepage 855 (Cyrillic) */

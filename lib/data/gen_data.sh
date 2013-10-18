@@ -3,7 +3,7 @@
 #    $Id: gen_data.sh,v 1.8 2005/03/09 20:07:30 lav Exp $
 
 OUTFILE=get_charset_data.h
-PRINTDATAPROGRAM="wwo ./print_data_string.exe.so"
+PRINTDATAPROGRAM="./print_data_string.exe"
 
 print()
 {
@@ -25,9 +25,9 @@ echo "Generating with WINE program..."
 echo "This is log error file. See for your problem locale here and send me a mail: lav@etersoft.ru">./gen_data.out.txt
 for i in `locale -a | LC_ALL=C sort`
 do
-	echo -e -n " {" >>$OUTFILE
+	echo -n " {" >>$OUTFILE
 	LANG=$i LC_CTYPE=$i $PRINTDATAPROGRAM 2>>./gen_data.out.txt >>$OUTFILE
-	echo -e " }," >>$OUTFILE
+	echo " }," >>$OUTFILE
 done
 echo >>$OUTFILE
 echo "/* Follow entries is dummy for ASCII/ANSI encoding */" >>$OUTFILE
