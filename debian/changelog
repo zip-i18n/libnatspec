@@ -1,4 +1,4 @@
-libnatspec (0.2.6-1ubuntu1) maverick; urgency=low
+libnatspec (0.2.6-1ubuntu2) xenial; urgency=low
 
   * debian/patches:
      + Added 05_cp737+cp775.diff - support for CP737 and CP775.
